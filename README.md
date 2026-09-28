@@ -140,7 +140,7 @@ npm run build
 npm run docs:check
 ```
 
-Tests mock Meta and cover OAuth, token validation, account/media reads, pagination, ownership, comments, publishing, insights, webhook security, rate limits, timeouts, permissions, invalid IDs, and write approvals. Integration tests exercise the official MCP SDK and real local HTTP boundaries. CI runs on Linux and Windows with Node 24. See [the validation report](docs/VALIDATION.md) for the exact locally executed results and limitations.
+Tests mock Meta and cover OAuth, token validation, account/media reads, pagination, ownership, comments, publishing, insights, webhook security, rate limits, timeouts, permissions, invalid IDs, and write approvals. Integration tests exercise the official MCP SDK and real local HTTP boundaries. CI is configured for Linux and Windows with Node 24. See [the validation report](docs/VALIDATION.md) for the exact locally executed results, hosted CI startup failure, and deployment limitations.
 
 ## Limits to keep in view
 

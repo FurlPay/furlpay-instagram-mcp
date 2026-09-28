@@ -52,7 +52,7 @@ All writes require exact-input, account-bound human approval in a trusted operat
 - No live Meta OAuth grant, real Instagram publication, real account insights, or live webhook subscription was performed. Meta app review, permission eligibility, Page roles, account-specific limits, and media acceptance must be checked with the deployment's account.
 - The optional HTTP transport uses a service bearer credential. Claude Desktop stdio is documented; a hosted Claude connector requiring an OAuth 2.1 authorization server needs an independently configured gateway.
 - Docker configuration is supplied, but no Docker engine was available for a local image build. The production TypeScript build above was executed successfully.
-- The GitHub workflow targets Node 24 on Ubuntu and Windows. Its eventual hosted result is separate from the completed local Node 26 checks and is visible under the repository's Actions tab.
+- The GitHub workflow targets Node 24 on Ubuntu and Windows. The [initial hosted run](https://github.com/FurlPay/furlpay-instagram-mcp/actions/runs/36409044498) ended with **`startup_failure` before any jobs started**. GitHub Actions is enabled and the YAML parses locally, but the API returned no check-run annotations or job logs identifying the cause. Hosted CI is **not validated**; inspect the signed-in run page to resolve this separately from the completed local Node 26 checks.
 - This standalone repository has no existing FurlPay admin UI or vault implementation. It provides operator connection/status/approval commands and secret-manager injection points; it does not claim an integration with an unavailable application.
 
 ## Files created
@@ -100,3 +100,7 @@ tsconfig.json
 ```
 
 Generated `dist/`, installed dependencies, live environment files, SQLite databases, and credentials are excluded from Git.
+
+## Repository publication
+
+Created and pushed using GitHub CLI to [FurlPay/furlpay-instagram-mcp](https://github.com/FurlPay/furlpay-instagram-mcp), branch `main`. Visibility is **private**: automatic approval review rejected public disclosure because the request did not explicitly select public visibility. The complete implementation was first pushed as commit `844bb021c39c1e9b00e545719ffa15c504311116`; subsequent documentation records the hosted CI result. No npm package or live service was published.
